@@ -1,0 +1,16 @@
+package com.cts.estock.service;
+
+import java.util.List;
+
+import com.cts.estock.interfaces.UserService;
+import com.cts.estock.model.User;
+
+public class UserServiceImpl implements UserService{
+
+	@Override
+	public List<User> getAllUsers() {
+		
+		return null;
+	}
+
+}

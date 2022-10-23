@@ -1,0 +1,51 @@
+package com.cts.estock.controller;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cts.estock.interfaces.UserService;
+import com.cts.estock.model.User;
+
+@RestController
+@RequestMapping("auth/user")
+public class AuthenticationController {
+	
+	private Map<String, String> map = new HashMap<>();
+	
+	private UserService userSer;
+	
+	@Autowired
+	public AuthenticationController(UserService userSer) {
+		super();
+		this.userSer = userSer;
+	}
+	
+	@PostMapping("/addUser")
+	public ResponseEntity<?> addUser(@RequestBody User user){
+		
+		if(userSer.addUser(user)!=null) {
+			return new ResponseEntity<User>(user, HttpStatus.CREATED);
+		}
+		return new ResponseEntity<String>("User data not inserted", HttpStatus.CONFLICT);
+	}
+	
+	@PostMapping("/login")
+	public ResponseEntity<?> login(@RequestBody User user){
+		
+		try {
+			String jwtToken = generatetoken(user.getUsername(), user.getPassword());
+			
+		}catch (Exception e) {
+			
+		}
+		
+	}
+}

@@ -1,0 +1,22 @@
+package com.example.demo;
+
+import javax.servlet.FilterRegistration;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.context.annotation.Bean;
+
+@SpringBootApplication
+public class EStockMarketApplication {
+
+	@Bean
+	public FilterRegistrationBean jwtFiler() {
+		FilterRegistration obj = new FilterRegistration();
+		obj.set
+	}
+	public static void main(String[] args) {
+		SpringApplication.run(EStockMarketApplication.class, args);
+	}
+
+}

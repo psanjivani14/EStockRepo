@@ -1,0 +1,7 @@
+package com.cts.estock.service;
+
+import com.cts.estock.interfaces.UserService;
+
+public class UserServiceImpl implements UserService{
+
+}

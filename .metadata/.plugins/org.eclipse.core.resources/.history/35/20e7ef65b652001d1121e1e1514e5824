@@ -1,0 +1,5 @@
+package com.cts.estock.controller;
+
+public class UserController {
+
+}

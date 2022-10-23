@@ -1,0 +1,35 @@
+package com.cts.estock.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cts.estock.interfaces.UserService;
+import com.cts.estock.model.User;
+import com.cts.estock.repository.UserRepository;
+
+@Service
+public class UserServiceImpl implements UserService{
+	
+	@Autowired
+	public UserRepository userRepo;
+
+	@Override
+	public List<User> getAllUsers() {
+		
+		return null;
+	}
+
+	@Override
+	public User addUser(User user) {
+		return null;
+	}
+
+	@Override
+	public Boolean validateUser(String username, String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

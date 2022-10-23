@@ -1,0 +1,9 @@
+package com.cts.estock.controller;
+
+@RestController
+@RequestMapping("api/v1")
+public class UserController {
+	
+	
+
+}

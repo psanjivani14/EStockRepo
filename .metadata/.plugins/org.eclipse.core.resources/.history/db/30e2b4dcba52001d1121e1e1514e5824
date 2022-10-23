@@ -1,0 +1,5 @@
+package com.cts.estock.repository;
+
+public interface UserRepository {
+
+}

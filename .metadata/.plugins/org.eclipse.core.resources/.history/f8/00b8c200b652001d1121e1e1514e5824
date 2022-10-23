@@ -1,0 +1,5 @@
+package com.cts.estock.model;
+
+public class User {
+
+}
